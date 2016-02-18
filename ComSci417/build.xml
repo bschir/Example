@@ -36,7 +36,7 @@
 
   <target name="clean"
         description="clean up">
-    <!-- Delete the ${build} and ${dist} directory trees -->
+    <!-- Delete the ${build} and ${dist} directory treess -->
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
   </target>
