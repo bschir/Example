@@ -44,7 +44,7 @@
   
   <target name="junit" depends="dist">
 
-    <junit printsummary="yes" fork="true" haltonfailure="yes">
+    <junit printsummary="yes" fork="true" haltonfailure="no" failureProperty="test.failed">
 	
 		<classpath refid="junit.class.path"/>
 		
@@ -56,5 +56,10 @@
 		</test>
 		
 	</junit>
+  </target>
+  
+  <target name="otherStuff" if="test.failed">
+    <echo message="A test has failed, so the build should fail"/>
+    <fail message="JUnit test or tests failed."/>
   </target>
 </project>
