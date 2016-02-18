@@ -44,7 +44,7 @@
   
   <target name="junit" depends="dist">
 
-    <junit printsummary="yes" fork="true" haltonfailure="no">
+    <junit printsummary="yes" fork="true" haltonfailure="yes">
 	
 		<classpath refid="junit.class.path"/>
 		
